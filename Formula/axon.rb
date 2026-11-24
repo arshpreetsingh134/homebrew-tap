@@ -5,13 +5,13 @@
 class Axon < Formula
   desc "Build, deploy and operate app clusters on Docker Compose or Kubernetes from one descriptor"
   homepage "https://github.com/arshpreetsingh134/axon"
-  version "0.3.0"
+  version "0.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/arshpreetsingh134/axon/releases/download/v0.3.0/axon_0.3.0_darwin_amd64.tar.gz"
-      sha256 "bc1dabe9065edbaa8b2866b940b6cc3fb1899a21b25c4fe3a08b669d108148ee"
+      url "https://github.com/arshpreetsingh134/axon/releases/download/v0.4.0/axon_0.4.0_darwin_amd64.tar.gz"
+      sha256 "8a27e1a076b9b828fd85a12b11fcdd7b9c88c99dfd22c22bb015a3fe584e4749"
 
       define_method(:install) do
         bin.install "axon"
@@ -21,8 +21,8 @@ class Axon < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/arshpreetsingh134/axon/releases/download/v0.3.0/axon_0.3.0_darwin_arm64.tar.gz"
-      sha256 "f83b5fea98b0a05361b8038a3b1fab6c0379f98d3992d0979c87dcd18bb67fc1"
+      url "https://github.com/arshpreetsingh134/axon/releases/download/v0.4.0/axon_0.4.0_darwin_arm64.tar.gz"
+      sha256 "ebdc4fd8b037a282ee57849221ec3075bf4222a5c9c463a7364b477be039adaa"
 
       define_method(:install) do
         bin.install "axon"
@@ -35,8 +35,8 @@ class Axon < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arshpreetsingh134/axon/releases/download/v0.3.0/axon_0.3.0_linux_amd64.tar.gz"
-      sha256 "7c1690c4b086a808e7286fb81b05bfa58149748c9663f14959bc047942eb3d50"
+      url "https://github.com/arshpreetsingh134/axon/releases/download/v0.4.0/axon_0.4.0_linux_amd64.tar.gz"
+      sha256 "d32a423b58b07bf9f2f1d76cdb15db4c8b06ec52e6be6181640720065822e171"
       define_method(:install) do
         bin.install "axon"
         bash_completion.install "completions/axon.bash" => "axon"
@@ -45,8 +45,8 @@ class Axon < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arshpreetsingh134/axon/releases/download/v0.3.0/axon_0.3.0_linux_arm64.tar.gz"
-      sha256 "77f70e20f455fea0492240edfde8a6a4e4a2441b93654ffa77394d4a9dc9878c"
+      url "https://github.com/arshpreetsingh134/axon/releases/download/v0.4.0/axon_0.4.0_linux_arm64.tar.gz"
+      sha256 "88368050778ebaecc7fcb335191678d47eecfc231303dc74853c28dd9acfef41"
       define_method(:install) do
         bin.install "axon"
         bash_completion.install "completions/axon.bash" => "axon"
